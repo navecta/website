@@ -52,6 +52,18 @@
             color: var(--brand-cyan);
         }
 
+        .hero-logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .hero-logo {
+                width: 160px;
+            }
+        }
+
         /* Hero */
         .hero {
             padding: 80px 0 60px;
@@ -283,6 +295,7 @@
     <main>
         <section class="hero">
             <div class="container">
+                <img src="NavectaLogo.png" alt="Navecta" class="hero-logo">
                 <p class="tagline">Navigate What Matters</p>
                 <h1>Software Products & <span>Technology Consulting</span></h1>
                 <p>We build tools that help professionals work smarter. Specializing in data analytics, mobile applications, and engineering tools.</p>
