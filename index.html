@@ -283,6 +283,63 @@
             padding: 4px 12px;
             border-radius: 999px;
         }
+
+        /* Waitlist Form */
+        .waitlist-form {
+            display: flex;
+            gap: 12px;
+            max-width: 440px;
+            margin: 32px auto 0;
+        }
+
+        .waitlist-form input[type="email"] {
+            flex: 1;
+            padding: 14px 18px;
+            font-size: 1rem;
+            font-family: inherit;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .waitlist-form input[type="email"]::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .waitlist-form input[type="email"]:focus {
+            border-color: var(--brand-cyan);
+        }
+
+        .waitlist-form button {
+            padding: 14px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            color: var(--brand-navy);
+            background: var(--brand-cyan);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+
+        .waitlist-form button:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 480px) {
+            .waitlist-form {
+                flex-direction: column;
+            }
+
+            .waitlist-form button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -298,7 +355,11 @@
                 <img src="NavectaLogo.png" alt="Navecta" class="hero-logo">
                 <p class="tagline">Navigate What Matters</p>
                 <h1>Software Products & <span>Technology Consulting</span></h1>
-                <p>We build tools that help professionals work smarter. Specializing in data analytics, mobile applications, and engineering tools.</p>
+                <p>We build focused tools that help professionals extract insight, automate workflows, and work smarter.</p>
+                <form class="waitlist-form" onsubmit="window.location.href='mailto:navecta@gmail.com?subject=Waitlist Signup&body=Please add me to the waitlist: ' + encodeURIComponent(this.email.value); return false;">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Join the Waitlist</button>
+                </form>
             </div>
         </section>
 
@@ -309,7 +370,7 @@
                     <div class="product-card">
                         <img src="contact-scout-icon.png" alt="Contact Scout" class="product-icon">
                         <h3>Contact Scout</h3>
-                        <p>Find contacts from any website in seconds. Extract emails, phone numbers, names, and more—all processed locally on your device.</p>
+                        <p>Extract publicly available contact information from websites in seconds. Emails, phone numbers, names, and more—all processed locally on your device.</p>
                         <div class="platform-badges">
                             <span class="platform-badge">iOS</span>
                             <span class="platform-badge">macOS</span>
@@ -321,7 +382,7 @@
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                         </div>
                         <h3>Transcript Scout</h3>
-                        <p>Extract and organize YouTube transcripts instantly. Perfect for researchers, content creators, and anyone who learns from video.</p>
+                        <p>Extract and organize YouTube transcripts instantly. For research, analysis, and content workflows.</p>
                         <div class="platform-badges">
                             <span class="platform-badge">iOS</span>
                             <span class="platform-badge">macOS</span>
@@ -357,7 +418,7 @@
     <footer>
         <div class="container">
             <a href="mailto:navecta@gmail.com" class="contact-email">navecta@gmail.com</a>
-            <p class="footer-text">&copy; 2025 Navecta LLC. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Navecta LLC. All rights reserved.</p>
         </div>
     </footer>
 </body>
